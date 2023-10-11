@@ -7,6 +7,7 @@ contents of the web_statoc folder (fabric script).
 from fabric.api import local
 from datetime import datetime
 
+
 def do_pack():
     """Fabric script to generate a .tgz archive from the contents of the
     web_static folde and store it in the versions directory."""
