@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """creating some 2 path route"""
 
-from flask import Flask, escape
+from flask import Flask, escape, render_template
 
 
 app = Flask(__name__)
@@ -37,6 +37,13 @@ def python(text):
 def number(n):
     """returning a number"""
     return f"{n} is a number"
+
+
+@app.route("/number_template/<int:n>")
+def number_template(n=None):
+    """display a HTML page only if n is an integer"""
+    if isinstance(n, int):
+        return render_template('5-number.html', n=n)
 
 
 if __name__ == '__main__':
