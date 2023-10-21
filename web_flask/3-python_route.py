@@ -30,7 +30,7 @@ def c_text(text):  # Fix the parameter name here
 @app.route("/python/<text>", strict_slashes=False)
 def python(text):
     """Replacing text with passed one"""
-    return "Python " + escape(text.replace("_"," "))
+    return "Python " + escape(text.replace("_", " "))
 
 
 if __name__ == '__main__':
