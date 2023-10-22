@@ -33,13 +33,13 @@ def python(text):
     return "Python " + escape(text.replace("_", " "))
 
 
-@app.route("/number/<int:n>")
+@app.route("/number/<int:n>", strict_slashes=False)
 def number(n):
     """returning a number"""
     return f"{n} is a number"
 
 
-@app.route("/number_template/<int:n>")
+@app.route("/number_template/<int:n>", strict_slashes=False)
 def number_template(n=None):
     """display a HTML page only if n is an integer"""
     if isinstance(n, int):
